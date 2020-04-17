@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <head>
+    <%- include ('partials/head') %>
+    <title>User list</title>
+  <style>
+    table, td, th {  
+      border: 2px solid #ddd;
+      text-align: left;
+    }
+    body{
+      background: url('https://drive.google.com/uc?export=download&id=15eWFsi7AjmEKAjDqOtubk_vOno7ACZvt') no-repeat top center;
+      background-size: cover;
+      min-height: 720px;
+      position: relative;
+    }
+    table {
+      border-collapse: collapse;
+      width: 63%;
+     
+    }
+    .table-data{
+      position: relative;
+    left: 408px;
+    top: 100px;
+    width: 73%;
+    }
+    th, td {
+      padding: 15px;
+    }
+    </style>
+</head>
+<body>
+    <div class="table-data">
+<h2>The list of the doctor</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Doctor</th>
+            <th>Email Address</th>
+            <th>AddAt</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        
+        <%
+        if(userData.length!=0){
+        var i=1;
+        userData.forEach(function(data){
+        %>
+        <tr>
+            <td><%=i; %></td>
+            <td><%=data.name %></td>
+            <td><%=data.email %></td>
+            <td><%=data.insertAt %></td>
+            <td><a href="/edit/<%=data.id%>"><button class="btn btn-info">Edit</button></a></td>          
+            <td><a href="/delete/<%=data.id%>"><button class="btn btn-info">Delete</button></a></td>
+        </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7">No Data Found</td>
+            </tr>
+        <% } %>
+    </table>
+    <a href="/home"><button class="btn btn-info">add doctor</button></a>
+    </div>
+</body>
+</html>

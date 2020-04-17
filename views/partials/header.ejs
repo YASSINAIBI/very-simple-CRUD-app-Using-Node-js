@@ -1,0 +1,35 @@
+<!-- views/partials/header.ejs -->
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+    
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <span class="glyphicon glyphicon glyphicon-tree-deciduous"></span>
+                <i class="fas fa-briefcase-medical fa-2x"></i>
+            </a>
+
+            <ul class="nav navbar-nav">
+                <li><a href="/home"><button class="btn btn-info">HOME</button></a></li>
+                <li><a href="/about"><button class="btn btn-info">ABOUT</button></a></li>
+            </ul>
+        </div>
+
+        <style>
+            .nav{
+                display: inline-flex !important;
+            }
+            .nav li{
+                position: absolute;
+                top: 15%;
+            }
+            .nav li:first-of-type{
+                left: 20%;
+            }
+            .nav li:nth-of-type(2){
+                left: 40%;
+            }
+        </style>
+
+    </div>
+    </nav>
