@@ -1,5 +1,5 @@
-# firsrMySqlProject
-# first clone the project
+# This is very simple CRUD app Using Node js
+ # first clone the project
 # install node in oficial web site https://nodejs.org/en/
 # install XAMPP-CONTROL
 # after instal node js the npm while be automatically install
